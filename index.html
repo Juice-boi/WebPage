@@ -1,46 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>3D Card Carousel with Info Zoom</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Poker Card Carousel</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="falling-symbols"></div>
 
-    <div class="falling-symbols" aria-hidden="true">
-    <!-- will be filled by JS; static fallback in case JS disabled -->
-    <div class="symbol" style="left:8%;top:-5%;animation-duration:9s">♠</div>
-    <div class="symbol" style="left:22%;top:-10%;animation-duration:11s">♥</div>
-    <div class="symbol" style="left:38%;top:-8%;animation-duration:10s">♦</div>
-    <div class="symbol" style="left:60%;top:-12%;animation-duration:12s">♣</div>
-    <div class="symbol" style="left:80%;top:-7%;animation-duration:8.5s">♠</div>
+<div class="carousel-container">
+  <div class="carousel" id="menuCarousel">
+    <div class="card flip-card" data-title="About Me" data-text="Things about me!" data-img="images/play.png">
+      <div class="flip-wrapper">
+        <div class="flip-card-inner">
+          <div class="flip-card-front"><div class="label">About Me</div></div>
+          <div class="flip-card-back">
+            <img src="" alt="" class="panel-img">
+            <h2 class="panel-title"></h2>
+            <p class="panel-text"></p>
+            <button class="btn close-btn">×</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-  <div class="carousel-container">
-    <div class="carousel" id="menuCarousel">
-      <div class="card"><div class="label">Skills</div></div>
-      <div class="card"><div class="label">About Me</div></div>
-      <div class="card"><div class="label">Projects</div></div>
-      <div class="card"><div class="label">GitHub</div></div>
-      <div class="card"><div class="label">TDB</div></div>
+    <div class="card flip-card" data-title="Skills" data-text="My Skills" data-img="images/settings.png">
+      <div class="flip-wrapper">
+        <div class="flip-card-inner">
+          <div class="flip-card-front"><div class="label">Skills</div></div>
+          <div class="flip-card-back">
+            <img src="" alt="" class="panel-img">
+            <h2 class="panel-title"></h2>
+            <p class="panel-text"></p>
+            <button class="btn close-btn">×</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="controls">
-      <button class="btn" id="prev">◀ Prev</button>
-      <button class="btn" id="next">Next ▶</button>
+    <div class="card flip-card" data-title="GitHub" data-text="My Projects" data-img="images/shop.png">
+      <div class="flip-wrapper">
+        <div class="flip-card-inner">
+          <div class="flip-card-front"><div class="label">GitHub</div></div>
+          <div class="flip-card-back">
+            <img src="" alt="" class="panel-img">
+            <h2 class="panel-title"></h2>
+            <p class="panel-text"></p>
+            <button class="btn close-btn">×</button>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="card flip-card" data-title="TDB" data-text="TDB" data-img="images/stats.png">
+      <div class="flip-wrapper">
+        <div class="flip-card-inner">
+          <div class="flip-card-front"><div class="label">TDB</div></div>
+          <div class="flip-card-back">
+            <img src="" alt="" class="panel-img">
+            <h2 class="panel-title"></h2>
+            <p class="panel-text"></p>
+            <button class="btn close-btn">×</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card flip-card" data-title="TDB" data-text="TDB" data-img="images/exit.png">
+      <div class="flip-wrapper">
+        <div class="flip-card-inner">
+          <div class="flip-card-front"><div class="label">TDB</div></div>
+          <div class="flip-card-back">
+            <img src="" alt="" class="panel-img">
+            <h2 class="panel-title"></h2>
+            <p class="panel-text"></p>
+            <button class="btn close-btn">×</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <!-- Info Panel -->
-  <div class="info-panel" id="infoPanel">
-    <div class="panel-content" id="panelContent">
-      <button class="btn close-btn" id="closePanel">×</button>
-      <h2 id="panelTitle">Card Info</h2>
-      <p id="panelText">Details about this option will appear here.</p>
-    </div>
+  <div class="controls">
+    <button class="btn" id="prev">◀ Prev</button>
+    <button class="btn" id="next">Next ▶</button>
   </div>
+</div>
 
-  <script src="script.js"></script>
+
+<script src="script.js"></script>
 </body>
 </html>
